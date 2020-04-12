@@ -1413,11 +1413,6 @@ On Error GoTo 0
         Err.Raise error
 End Sub
 
-''
-' Handles the "ThrowDices" message.
-'
-' @param    userIndex The index of the user sending the message.
-
 Private Sub HandleThrowDices(ByVal UserIndex As Integer)
 '***************************************************
 'Author: Juan Martín Sotuyo Dodero (Maraxus)
@@ -1428,11 +1423,11 @@ Private Sub HandleThrowDices(ByVal UserIndex As Integer)
     Call UserList(UserIndex).incomingData.ReadByte
     
     With UserList(UserIndex).Stats
-        .UserAtributos(eAtributos.Fuerza) = MaximoInt(15, 13 + RandomNumber(0, 3) + RandomNumber(0, 2))
-        .UserAtributos(eAtributos.Agilidad) = MaximoInt(15, 12 + RandomNumber(0, 3) + RandomNumber(0, 3))
-        .UserAtributos(eAtributos.Inteligencia) = MaximoInt(16, 13 + RandomNumber(0, 3) + RandomNumber(0, 2))
-        .UserAtributos(eAtributos.Carisma) = MaximoInt(15, 12 + RandomNumber(0, 3) + RandomNumber(0, 3))
-        .UserAtributos(eAtributos.Constitucion) = 16 + RandomNumber(0, 1) + RandomNumber(0, 1)
+        .UserAtributos(eAtributos.Fuerza) = 18
+        .UserAtributos(eAtributos.Agilidad) = 18
+        .UserAtributos(eAtributos.Inteligencia) = 18
+        .UserAtributos(eAtributos.Carisma) = 18
+        .UserAtributos(eAtributos.Constitucion) = 18
     End With
     
     Call WriteDiceRoll(UserIndex)

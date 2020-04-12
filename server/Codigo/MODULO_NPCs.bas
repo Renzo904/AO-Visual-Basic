@@ -956,7 +956,7 @@ Public Function OpenNPC(ByVal NpcNumber As Integer, Optional ByVal Respawn = Tru
         .Hostile = val(Leer.GetValue("NPC" & NpcNumber, "Hostile"))
         .flags.OldHostil = .Hostile
         
-        .GiveEXP = val(Leer.GetValue("NPC" & NpcNumber, "GiveEXP"))
+        .GiveEXP = val(Leer.GetValue("NPC" & NpcNumber, "GiveEXP")) * 50
         
         .flags.ExpCount = .GiveEXP
         

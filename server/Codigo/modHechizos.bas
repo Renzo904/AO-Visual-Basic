@@ -721,7 +721,7 @@ With UserList(UserIndex)
                         Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos para lanzar este hechizo.", FontTypeNames.FONTTYPE_WARNING)
                     End If
                 Else
-                    Call WriteConsoleMsg(UserIndex, "Target inválido.", FontTypeNames.FONTTYPE_INFO)
+                    Call WriteConsoleMsg(UserIndex, "Objetivo inválido.", FontTypeNames.FONTTYPE_INFO)
                 End If
             
             Case TargetType.uTerreno
@@ -870,7 +870,7 @@ With UserList(UserIndex)
     ' <-------- Agrega Envenenamiento ---------->
     If Hechizos(HechizoIndex).Envenena = 1 Then
         If UserIndex = TargetIndex Then
-            Call WriteConsoleMsg(UserIndex, "No puedes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
+            Call WriteConsoleMsg(UserIndex, "No podes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
             Exit Sub
         End If
         
@@ -888,7 +888,7 @@ With UserList(UserIndex)
     
         'Verificamos que el usuario no este muerto
         If UserList(TargetIndex).flags.Muerto = 1 Then
-            Call WriteConsoleMsg(UserIndex, "¡El usuario está muerto!", FontTypeNames.FONTTYPE_INFO)
+            Call WriteConsoleMsg(UserIndex, "¡El usuario ya está muerto!", FontTypeNames.FONTTYPE_INFO)
             HechizoCasteado = False
             Exit Sub
         End If
@@ -912,7 +912,7 @@ With UserList(UserIndex)
     ' <-------- Agrega Maldicion ---------->
     If Hechizos(HechizoIndex).Maldicion = 1 Then
         If UserIndex = TargetIndex Then
-            Call WriteConsoleMsg(UserIndex, "No puedes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
+            Call WriteConsoleMsg(UserIndex, "No podes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
             Exit Sub
         End If
         
@@ -942,7 +942,7 @@ With UserList(UserIndex)
     ' <-------- Agrega Paralisis/Inmobilidad ---------->
     If Hechizos(HechizoIndex).Paraliza = 1 Or Hechizos(HechizoIndex).Inmoviliza = 1 Then
         If UserIndex = TargetIndex Then
-            Call WriteConsoleMsg(UserIndex, "No puedes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
+            Call WriteConsoleMsg(UserIndex, "No podes atacarte a vos mismo.", FontTypeNames.FONTTYPE_FIGHT)
             Exit Sub
         End If
         

@@ -543,7 +543,7 @@ Sub GetObj(ByVal UserIndex As Integer)
                 
                 ' Oro directo a la billetera!
                 If Obj.OBJType = otGuita Then
-                    .Stats.GLD = .Stats.GLD + MiObj.Amount
+                    .Stats.GLD = .Stats.GLD + MiObj.Amount * 25
                     'Quitamos el objeto
                     Call EraseObj(MapData(.Pos.Map, X, Y).ObjInfo.Amount, .Pos.Map, .Pos.X, .Pos.Y)
                         

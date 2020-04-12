@@ -4,7 +4,7 @@ Object = "{33101C00-75C3-11CF-A8A0-444553540000}#1.0#0"; "CSWSK32.OCX"
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "MSWINSCK.OCX"
 Begin VB.Form frmMain 
    BorderStyle     =   0  'None
-   ClientHeight    =   8955
+   ClientHeight    =   8700
    ClientLeft      =   360
    ClientTop       =   300
    ClientWidth     =   12000
@@ -26,7 +26,7 @@ Begin VB.Form frmMain
    MaxButton       =   0   'False
    MinButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   597
+   ScaleHeight     =   580
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   800
    StartUpPosition =   2  'CenterScreen
@@ -243,18 +243,17 @@ Begin VB.Form frmMain
       Top             =   2520
    End
    Begin RichTextLib.RichTextBox RecTxt 
-      Height          =   1478
+      Height          =   1485
       Left            =   150
       TabIndex        =   0
       TabStop         =   0   'False
       ToolTipText     =   "Mensajes del servidor"
-      Top             =   360
+      Top             =   240
       Width           =   8205
       _ExtentX        =   14473
       _ExtentY        =   2619
       _Version        =   393217
       BackColor       =   0
-      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       DisableNoScroll =   -1  'True
@@ -279,6 +278,14 @@ Begin VB.Form frmMain
       Top             =   2400
       Visible         =   0   'False
       Width           =   2565
+   End
+   Begin VB.Label lblLVMax 
+      BackStyle       =   0  'Transparent
+      Height          =   255
+      Left            =   10680
+      TabIndex        =   34
+      Top             =   1200
+      Width           =   975
    End
    Begin VB.Image imgMapa 
       Height          =   300
@@ -551,13 +558,13 @@ Begin VB.Form frmMain
       Width           =   2010
    End
    Begin VB.Image CmdLanzar 
-      Height          =   375
-      Left            =   8760
+      Height          =   495
+      Left            =   8640
       MouseIcon       =   "frmMain.frx":0F57
       MousePointer    =   99  'Custom
       Top             =   5280
       Visible         =   0   'False
-      Width           =   1155
+      Width           =   1275
    End
    Begin VB.Label Label4 
       BackStyle       =   0  'Transparent
@@ -591,7 +598,7 @@ Begin VB.Form frmMain
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000FF&
+      ForeColor       =   &H0000C0C0&
       Height          =   210
       Left            =   10920
       TabIndex        =   15
@@ -756,9 +763,9 @@ Begin VB.Form frmMain
    End
    Begin VB.Image InvEqu 
       Height          =   4230
-      Left            =   8715
-      Top             =   1875
-      Width           =   2970
+      Left            =   8520
+      Top             =   1800
+      Width           =   3210
    End
    Begin VB.Label lblMana 
       Alignment       =   2  'Center
@@ -1479,6 +1486,11 @@ Private Sub lblCerrar_Click()
                 Call WriteQuit
 End Sub
 
+Private Sub lblLVMax_Change()
+If lblLvl = 50 Then
+    lblLVMax.Caption = "NIVEL MAXIMO"
+    End If
+End Sub
 Private Sub lblMinimizar_Click()
     Me.WindowState = 1
 End Sub
@@ -1603,8 +1615,8 @@ Private Sub SendTxt_KeyUp(KeyCode As Integer, Shift As Integer)
         KeyCode = 0
         SendTxt.Visible = False
         
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         Else
             hlst.SetFocus
         End If
@@ -1807,27 +1819,27 @@ Private Sub Form_Click()
                     End If
                     
                     'Splitted because VB isn't lazy!
-                    If UsingSkill = Magia Then
-                        If Not MainTimer.Check(TimersIndex.Attack, False) Then 'Check if attack interval has finished.
-                            If Not MainTimer.Check(TimersIndex.CastAttack) Then 'Corto intervalo de Golpe-Magia
-                                frmMain.MousePointer = vbDefault
-                                UsingSkill = 0
-                                With FontTypes(FontTypeNames.FONTTYPE_TALK)
-                                    Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rápido.", .red, .green, .blue, .bold, .italic)
-                                End With
-                                Exit Sub
-                            End If
-                        Else
-                            If Not MainTimer.Check(TimersIndex.CastSpell) Then 'Check if spells interval has finished.
-                                frmMain.MousePointer = vbDefault
-                                UsingSkill = 0
-                                With FontTypes(FontTypeNames.FONTTYPE_TALK)
-                                    Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rapido.", .red, .green, .blue, .bold, .italic)
-                                End With
-                                Exit Sub
-                            End If
-                        End If
-                    End If
+'If UsingSkill = Magia Then
+                        'If Not MainTimer.Check(TimersIndex.Attack, False) Then 'Check if attack interval has finished.
+                            'If Not MainTimer.Check(TimersIndex.CastAttack) Then 'Corto intervalo de Golpe-Magia
+                                'frmMain.MousePointer = vbDefault
+                                'UsingSkill = 0
+                                'With FontTypes(FontTypeNames.FONTTYPE_TALK)
+                                    'Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rápido.", .red, .green, .blue, .bold, .italic)
+                                'End With
+                                'Exit Sub
+                            'End If
+                        'Else
+                            'If Not MainTimer.Check(TimersIndex.CastSpell) Then 'Check if spells interval has finished.
+                                'frmMain.MousePointer = vbDefault
+                                'UsingSkill = 0
+                                'With FontTypes(FontTypeNames.FONTTYPE_TALK)
+                                    'Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rapido.", .red, .green, .blue, .bold, .italic)
+                                'End With
+                                'Exit Sub
+                            'End If
+                        'End If
+                    'End If
                     
                     'Splitted because VB isn't lazy!
                     If (UsingSkill = Pesca Or UsingSkill = Robar Or UsingSkill = Talar Or UsingSkill = Mineria Or UsingSkill = FundirMetal) Then
@@ -1917,13 +1929,13 @@ Private Sub Label4_Click()
     InvEqu.Picture = LoadPicture(App.path & "\Graficos\Centroinventario.jpg")
 
     ' Activo controles de inventario
-    PicInv.Visible = True
+    picInv.Visible = True
     imgInvScrollUp.Visible = True
     imgInvScrollDown.Visible = True
 
     ' Desactivo controles de hechizo
     hlst.Visible = False
-    cmdINFO.Visible = False
+    cmdInfo.Visible = False
     CmdLanzar.Visible = False
     
     cmdMoverHechi(0).Visible = False
@@ -1938,14 +1950,14 @@ Private Sub Label7_Click()
     
     ' Activo controles de hechizos
     hlst.Visible = True
-    cmdINFO.Visible = True
+    cmdInfo.Visible = True
     CmdLanzar.Visible = True
     
     cmdMoverHechi(0).Visible = True
     cmdMoverHechi(1).Visible = True
     
     ' Desactivo controles de inventario
-    PicInv.Visible = False
+    picInv.Visible = False
     imgInvScrollUp.Visible = False
     imgInvScrollDown.Visible = False
 
@@ -1977,8 +1989,8 @@ On Error Resume Next  'el .SetFocus causaba errores al salir y volver a entrar
         (Not frmMSG.Visible) And (Not MirandoForo) And _
         (Not frmEstadisticas.Visible) And (Not frmCantidad.Visible) Then
          
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         ElseIf hlst.Visible Then
             hlst.SetFocus
         End If
@@ -1986,8 +1998,8 @@ On Error Resume Next  'el .SetFocus causaba errores al salir y volver a entrar
 End Sub
 
 Private Sub RecTxt_KeyDown(KeyCode As Integer, Shift As Integer)
-    If PicInv.Visible Then
-        PicInv.SetFocus
+    If picInv.Visible Then
+        picInv.SetFocus
     Else
         hlst.SetFocus
     End If
@@ -2043,8 +2055,8 @@ Private Sub SendCMSTXT_KeyUp(KeyCode As Integer, Shift As Integer)
         KeyCode = 0
         Me.SendCMSTXT.Visible = False
         
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         Else
             hlst.SetFocus
         End If
