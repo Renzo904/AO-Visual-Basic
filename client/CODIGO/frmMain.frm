@@ -254,6 +254,7 @@ Begin VB.Form frmMain
       _ExtentY        =   2619
       _Version        =   393217
       BackColor       =   0
+      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       DisableNoScroll =   -1  'True
@@ -935,14 +936,14 @@ Attribute VB_Exposed = False
 'Copyright (C) 2002 Otto Perez
 'Copyright (C) 2002 Aaron Perkins
 'Copyright (C) 2002 Matías Fernando Pequeño
+'This program is distributed in the hope that it will be useful,
+'but WITHOUT ANY WARRANTY; without even the implied warranty of
+'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
 'either version 1 of the License, or any later version.
 '
-'This program is distributed in the hope that it will be useful,
-'but WITHOUT ANY WARRANTY; without even the implied warranty of
-'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 'Affero General Public License for more details.
 '
 'You should have received a copy of the Affero General Public License

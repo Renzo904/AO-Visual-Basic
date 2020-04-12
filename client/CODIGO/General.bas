@@ -788,7 +788,12 @@ Sub Main()
     
     If FindPreviousInstance Then
         Call MsgBox("Argentum Online ya esta corriendo! No es posible correr otra instancia del juego. Haga click en Aceptar para salir.", vbApplicationModal + vbInformation + vbOKOnly, "Error al ejecutar")
-        End
+
+        If MsgBox("Desea continuar?", vbYesNo, "") = vbYes Then
+            
+        ElseIf vbNo Then
+            End
+        End If
     End If
     
     'Read command line. Do it AFTER config file is loaded to prevent this from
