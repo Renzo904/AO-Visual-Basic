@@ -4,11 +4,7 @@ Object = "{33101C00-75C3-11CF-A8A0-444553540000}#1.0#0"; "CSWSK32.OCX"
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "MSWINSCK.OCX"
 Begin VB.Form frmMain 
    BorderStyle     =   0  'None
-<<<<<<< HEAD
    ClientHeight    =   8940
-=======
-   ClientHeight    =   8700
->>>>>>> master
    ClientLeft      =   360
    ClientTop       =   300
    ClientWidth     =   12000
@@ -30,12 +26,8 @@ Begin VB.Form frmMain
    MaxButton       =   0   'False
    MinButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-<<<<<<< HEAD
    Picture         =   "frmMain.frx":030A
    ScaleHeight     =   596
-=======
-   ScaleHeight     =   580
->>>>>>> master
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   800
    StartUpPosition =   2  'CenterScreen
@@ -253,20 +245,17 @@ Begin VB.Form frmMain
    End
    Begin RichTextLib.RichTextBox RecTxt 
       Height          =   1485
-<<<<<<< HEAD
       Left            =   120
-=======
-      Left            =   150
->>>>>>> master
       TabIndex        =   0
       TabStop         =   0   'False
       ToolTipText     =   "Mensajes del servidor"
-      Top             =   240
+      Top             =   360
       Width           =   8205
       _ExtentX        =   14473
       _ExtentY        =   2619
       _Version        =   393217
       BackColor       =   0
+      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       DisableNoScroll =   -1  'True
@@ -293,7 +282,6 @@ Begin VB.Form frmMain
       Visible         =   0   'False
       Width           =   2565
    End
-<<<<<<< HEAD
    Begin VB.Label lblRentom 
       BackStyle       =   0  'Transparent
       Caption         =   "Rentom AO"
@@ -302,14 +290,6 @@ Begin VB.Form frmMain
       Left            =   9600
       TabIndex        =   33
       Top             =   1320
-=======
-   Begin VB.Label lblLVMax 
-      BackStyle       =   0  'Transparent
-      Height          =   255
-      Left            =   10680
-      TabIndex        =   34
-      Top             =   1200
->>>>>>> master
       Width           =   975
    End
    Begin VB.Image imgMapa 
@@ -567,13 +547,8 @@ Begin VB.Form frmMain
    End
    Begin VB.Image CmdLanzar 
       Height          =   495
-<<<<<<< HEAD
       Left            =   8760
       MouseIcon       =   "frmMain.frx":159BE
-=======
-      Left            =   8640
-      MouseIcon       =   "frmMain.frx":0F57
->>>>>>> master
       MousePointer    =   99  'Custom
       Top             =   5280
       Visible         =   0   'False
@@ -612,13 +587,8 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H0000C0C0&
-<<<<<<< HEAD
       Height          =   165
       Left            =   11040
-=======
-      Height          =   210
-      Left            =   10920
->>>>>>> master
       TabIndex        =   15
       Top             =   6360
       Width           =   210
@@ -1508,11 +1478,6 @@ Private Sub lblCerrar_Click()
                 Call WriteQuit
 End Sub
 
-Private Sub lblLVMax_Change()
-If lblLvl = 50 Then
-    lblLVMax.Caption = "NIVEL MAXIMO"
-    End If
-End Sub
 Private Sub lblMinimizar_Click()
     Me.WindowState = 1
 End Sub
