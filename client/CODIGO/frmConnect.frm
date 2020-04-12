@@ -143,7 +143,7 @@ Begin VB.Form frmConnect
    End
    Begin VB.Image imgConectarse 
       Height          =   375
-      Left            =   4800
+      Left            =   4680
       Top             =   4560
       Width           =   1215
    End
@@ -167,9 +167,9 @@ Begin VB.Form frmConnect
    End
    Begin VB.Image imgCrearPj 
       Height          =   375
-      Left            =   6120
+      Left            =   6000
       Top             =   4560
-      Width           =   975
+      Width           =   1215
    End
    Begin VB.Image imgServArgentina 
       Height          =   795
@@ -405,7 +405,7 @@ On Error GoTo errH
     Exit Sub
 
 errH:
-    Call MsgBox("No se encuentra el programa recuperar.exe", vbCritical, "Argentum Online")
+    Call MsgBox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
 End Sub
 
 Private Sub imgCodigoFuente_Click()

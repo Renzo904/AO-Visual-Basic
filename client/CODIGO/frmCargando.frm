@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.ocx"
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
 Begin VB.Form frmCargando 
    AutoRedraw      =   -1  'True
    BackColor       =   &H80000000&
@@ -14,6 +14,7 @@ Begin VB.Form frmCargando
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   Picture         =   "frmCargando.frx":0000
    ScaleHeight     =   510
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   668
@@ -25,16 +26,16 @@ Begin VB.Form frmCargando
       TabIndex        =   1
       TabStop         =   0   'False
       ToolTipText     =   "Mensajes del servidor"
-      Top             =   4320
+      Top             =   4560
       Width           =   5160
       _ExtentX        =   9102
       _ExtentY        =   2725
       _Version        =   393217
       BackColor       =   0
-      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
-      TextRTF         =   $"frmCargando.frx":0000
+      Appearance      =   0
+      TextRTF         =   $"frmCargando.frx":2C79E
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Verdana"
          Size            =   8.25

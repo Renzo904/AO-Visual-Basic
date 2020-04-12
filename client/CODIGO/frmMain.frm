@@ -4,7 +4,7 @@ Object = "{33101C00-75C3-11CF-A8A0-444553540000}#1.0#0"; "CSWSK32.OCX"
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "MSWINSCK.OCX"
 Begin VB.Form frmMain 
    BorderStyle     =   0  'None
-   ClientHeight    =   8715
+   ClientHeight    =   8940
    ClientLeft      =   360
    ClientTop       =   300
    ClientWidth     =   12000
@@ -26,7 +26,8 @@ Begin VB.Form frmMain
    MaxButton       =   0   'False
    MinButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   581
+   Picture         =   "frmMain.frx":030A
+   ScaleHeight     =   596
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   800
    StartUpPosition =   2  'CenterScreen
@@ -75,7 +76,7 @@ Begin VB.Form frmMain
       MousePointer    =   99  'Custom
       ScaleHeight     =   450
       ScaleWidth      =   420
-      TabIndex        =   30
+      TabIndex        =   29
       Top             =   8445
       Width           =   420
    End
@@ -91,7 +92,7 @@ Begin VB.Form frmMain
       MousePointer    =   99  'Custom
       ScaleHeight     =   450
       ScaleWidth      =   420
-      TabIndex        =   29
+      TabIndex        =   28
       Top             =   8445
       Width           =   420
    End
@@ -107,7 +108,7 @@ Begin VB.Form frmMain
       MousePointer    =   99  'Custom
       ScaleHeight     =   450
       ScaleWidth      =   420
-      TabIndex        =   28
+      TabIndex        =   27
       Top             =   8445
       Width           =   420
    End
@@ -124,7 +125,7 @@ Begin VB.Form frmMain
       ScaleHeight     =   30
       ScaleMode       =   3  'Pixel
       ScaleWidth      =   28
-      TabIndex        =   27
+      TabIndex        =   26
       Top             =   8445
       Width           =   420
    End
@@ -145,14 +146,14 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H80000008&
-      Height          =   1920
-      Left            =   9000
-      ScaleHeight     =   128
+      Height          =   2040
+      Left            =   8880
+      ScaleHeight     =   136
       ScaleMode       =   3  'Pixel
-      ScaleWidth      =   160
+      ScaleWidth      =   168
       TabIndex        =   16
-      Top             =   2400
-      Width           =   2400
+      Top             =   2760
+      Width           =   2520
    End
    Begin MSWinsockLib.Winsock Winsock2 
       Left            =   5760
@@ -208,7 +209,7 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H000000FF&
       Height          =   315
-      Left            =   120
+      Left            =   240
       MaxLength       =   160
       MultiLine       =   -1  'True
       TabIndex        =   1
@@ -244,11 +245,11 @@ Begin VB.Form frmMain
    End
    Begin RichTextLib.RichTextBox RecTxt 
       Height          =   1485
-      Left            =   150
+      Left            =   120
       TabIndex        =   0
       TabStop         =   0   'False
       ToolTipText     =   "Mensajes del servidor"
-      Top             =   240
+      Top             =   360
       Width           =   8205
       _ExtentX        =   14473
       _ExtentY        =   2619
@@ -258,7 +259,7 @@ Begin VB.Form frmMain
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       DisableNoScroll =   -1  'True
-      TextRTF         =   $"frmMain.frx":030A
+      TextRTF         =   $"frmMain.frx":14D71
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Tahoma"
          Size            =   8.25
@@ -270,59 +271,62 @@ Begin VB.Form frmMain
       EndProperty
    End
    Begin VB.ListBox hlst 
+      Appearance      =   0  'Flat
       BackColor       =   &H00000000&
       ForeColor       =   &H00FFFFFF&
-      Height          =   2790
+      Height          =   2565
       Left            =   8880
       TabIndex        =   17
       TabStop         =   0   'False
-      Top             =   2400
+      Top             =   2640
       Visible         =   0   'False
       Width           =   2565
    End
-   Begin VB.Label lblLVMax 
+   Begin VB.Label lblRentom 
       BackStyle       =   0  'Transparent
+      Caption         =   "Rentom AO"
+      ForeColor       =   &H8000000B&
       Height          =   255
-      Left            =   10680
-      TabIndex        =   34
-      Top             =   1200
+      Left            =   9600
+      TabIndex        =   33
+      Top             =   1320
       Width           =   975
    End
    Begin VB.Image imgMapa 
       Height          =   300
-      Left            =   10230
-      Top             =   6675
+      Left            =   10320
+      Top             =   6720
       Width           =   1395
    End
    Begin VB.Image imgClanes 
       Height          =   390
-      Left            =   10245
-      Top             =   7980
+      Left            =   10320
+      Top             =   8040
       Width           =   1380
    End
    Begin VB.Image imgEstadisticas 
       Height          =   360
-      Left            =   10215
-      Top             =   7605
+      Left            =   10320
+      Top             =   7680
       Width           =   1425
    End
    Begin VB.Image imgOpciones 
       Height          =   330
-      Left            =   10215
-      Top             =   7275
+      Left            =   10320
+      Top             =   7320
       Width           =   1425
    End
    Begin VB.Image imgGrupo 
       Height          =   315
-      Left            =   10215
-      Top             =   6990
+      Left            =   10320
+      Top             =   6960
       Width           =   1410
    End
    Begin VB.Image imgAsignarSkill 
       Height          =   450
-      Left            =   9975
+      Left            =   9960
       MousePointer    =   99  'Custom
-      Top             =   690
+      Top             =   120
       Visible         =   0   'False
       Width           =   450
    End
@@ -331,7 +335,7 @@ Begin VB.Form frmMain
       Height          =   255
       Left            =   10560
       MousePointer    =   99  'Custom
-      TabIndex        =   33
+      TabIndex        =   32
       Top             =   6240
       Width           =   255
    End
@@ -340,7 +344,7 @@ Begin VB.Form frmMain
       Height          =   255
       Left            =   11280
       MousePointer    =   99  'Custom
-      TabIndex        =   32
+      TabIndex        =   31
       Top             =   60
       Width           =   255
    End
@@ -349,7 +353,7 @@ Begin VB.Form frmMain
       Height          =   255
       Left            =   11550
       MousePointer    =   99  'Custom
-      TabIndex        =   31
+      TabIndex        =   30
       Top             =   60
       Width           =   255
    End
@@ -366,20 +370,20 @@ Begin VB.Form frmMain
       EndProperty
       Height          =   450
       Left            =   10320
-      MouseIcon       =   "frmMain.frx":0387
+      MouseIcon       =   "frmMain.frx":14DEE
       MousePointer    =   99  'Custom
       TabIndex        =   19
-      Top             =   1920
-      Width           =   1125
+      Top             =   2040
+      Width           =   1365
    End
    Begin VB.Label lblFPS 
       BackStyle       =   0  'Transparent
       Caption         =   "101"
       ForeColor       =   &H00FFFFFF&
-      Height          =   180
-      Left            =   6705
-      TabIndex        =   26
-      Top             =   60
+      Height          =   420
+      Left            =   6720
+      TabIndex        =   25
+      Top             =   120
       Width           =   555
    End
    Begin VB.Image imgInvScrollDown 
@@ -397,9 +401,9 @@ Begin VB.Form frmMain
       Width           =   420
    End
    Begin VB.Image cmdInfo 
-      Height          =   405
-      Left            =   10680
-      MouseIcon       =   "frmMain.frx":04D9
+      Height          =   525
+      Left            =   10560
+      MouseIcon       =   "frmMain.frx":14F40
       MousePointer    =   99  'Custom
       Top             =   5280
       Visible         =   0   'False
@@ -419,9 +423,9 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H0000FFFF&
       Height          =   255
-      Left            =   8700
-      TabIndex        =   25
-      Top             =   8445
+      Left            =   8640
+      TabIndex        =   24
+      Top             =   8400
       Visible         =   0   'False
       Width           =   1935
    End
@@ -429,9 +433,9 @@ Begin VB.Form frmMain
       Height          =   240
       Index           =   0
       Left            =   11430
-      MouseIcon       =   "frmMain.frx":062B
+      MouseIcon       =   "frmMain.frx":15092
       MousePointer    =   99  'Custom
-      Picture         =   "frmMain.frx":077D
+      Picture         =   "frmMain.frx":151E4
       Top             =   3480
       Visible         =   0   'False
       Width           =   225
@@ -440,9 +444,9 @@ Begin VB.Form frmMain
       Height          =   240
       Index           =   1
       Left            =   11430
-      MouseIcon       =   "frmMain.frx":0AC1
+      MouseIcon       =   "frmMain.frx":15528
       MousePointer    =   99  'Custom
-      Picture         =   "frmMain.frx":0C13
+      Picture         =   "frmMain.frx":1567A
       Top             =   3225
       Visible         =   0   'False
       Width           =   225
@@ -462,7 +466,9 @@ Begin VB.Form frmMain
       Width           =   225
    End
    Begin VB.Label lblName 
+      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
+      Caption         =   "Itaxhi"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -475,14 +481,14 @@ Begin VB.Form frmMain
       ForeColor       =   &H000000FF&
       Height          =   195
       Left            =   8760
-      TabIndex        =   24
-      Top             =   360
+      TabIndex        =   23
+      Top             =   720
       Width           =   2625
    End
    Begin VB.Label lblLvl 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "255"
+      Caption         =   "50"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   8.25
@@ -493,30 +499,11 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FFFFFF&
-      Height          =   225
-      Left            =   9825
-      TabIndex        =   23
-      Top             =   1140
-      Width           =   270
-   End
-   Begin VB.Label Label6 
-      BackStyle       =   0  'Transparent
-      Caption         =   "Nivel"
-      BeginProperty Font 
-         Name            =   "Arial"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FFFFFF&
-      Height          =   225
-      Left            =   9225
+      Height          =   210
+      Left            =   11400
       TabIndex        =   22
-      Top             =   1140
-      Width           =   465
+      Top             =   720
+      Width           =   180
    End
    Begin VB.Label lblPorcLvl 
       AutoSize        =   -1  'True
@@ -533,9 +520,9 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H00FFFF00&
       Height          =   225
-      Left            =   9225
+      Left            =   11040
       TabIndex        =   21
-      Top             =   1320
+      Top             =   1080
       Width           =   555
    End
    Begin VB.Label lblExp 
@@ -553,15 +540,15 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H00FFFFFF&
       Height          =   225
-      Left            =   9225
+      Left            =   9000
       TabIndex        =   20
-      Top             =   1500
+      Top             =   1080
       Width           =   2010
    End
    Begin VB.Image CmdLanzar 
       Height          =   495
-      Left            =   8640
-      MouseIcon       =   "frmMain.frx":0F57
+      Left            =   8760
+      MouseIcon       =   "frmMain.frx":159BE
       MousePointer    =   99  'Custom
       Top             =   5280
       Visible         =   0   'False
@@ -580,10 +567,10 @@ Begin VB.Form frmMain
       EndProperty
       Height          =   435
       Left            =   8880
-      MouseIcon       =   "frmMain.frx":10A9
+      MouseIcon       =   "frmMain.frx":15B10
       MousePointer    =   99  'Custom
       TabIndex        =   18
-      Top             =   1920
+      Top             =   2040
       Width           =   1395
    End
    Begin VB.Label GldLbl 
@@ -600,11 +587,11 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H0000C0C0&
-      Height          =   210
-      Left            =   10920
+      Height          =   165
+      Left            =   11040
       TabIndex        =   15
-      Top             =   6270
-      Width           =   90
+      Top             =   6360
+      Width           =   210
    End
    Begin VB.Label lblStrg 
       Alignment       =   2  'Center
@@ -621,9 +608,9 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H0000FFFF&
       Height          =   210
-      Left            =   9720
+      Left            =   9600
       TabIndex        =   9
-      Top             =   6225
+      Top             =   6360
       Width           =   210
    End
    Begin VB.Label lblDext 
@@ -640,10 +627,10 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H0000FFFF&
-      Height          =   210
+      Height          =   165
       Left            =   9120
       TabIndex        =   8
-      Top             =   6225
+      Top             =   6360
       Width           =   210
    End
    Begin VB.Label Coord 
@@ -660,10 +647,10 @@ Begin VB.Form frmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H0000FFFF&
-      Height          =   255
-      Left            =   8700
+      Height          =   375
+      Left            =   8640
       TabIndex        =   7
-      Top             =   8670
+      Top             =   8520
       Width           =   1335
    End
    Begin VB.Label lblWeapon 
@@ -683,7 +670,7 @@ Begin VB.Form frmMain
       Height          =   255
       Left            =   6960
       TabIndex        =   6
-      Top             =   8640
+      Top             =   8520
       Width           =   855
    End
    Begin VB.Label lblShielder 
@@ -701,7 +688,7 @@ Begin VB.Form frmMain
       EndProperty
       ForeColor       =   &H000000FF&
       Height          =   255
-      Left            =   5130
+      Left            =   5160
       TabIndex        =   5
       Top             =   8640
       Width           =   855
@@ -1010,7 +997,7 @@ Private Sub Form_Load()
 
     Me.Picture = LoadPicture(DirGraficos & "VentanaPrincipal.JPG")
     
-    InvEqu.Picture = LoadPicture(DirGraficos & "CentroInventario.jpg")
+    
     
     Call LoadButtons
     
@@ -1036,31 +1023,31 @@ Private Sub LoadButtons()
     Set LastPressed = New clsGraphicalButton
     
     
-    Call cBotonDiamArriba.Initialize(imgInvScrollUp, "", _
+    'Call cBotonDiamArriba.Initialize(imgInvScrollUp, "", _
                                     GrhPath & "BotonDiamArribaF.bmp", _
                                     GrhPath & "BotonDiamArribaF.bmp", Me)
 
-    Call cBotonDiamAbajo.Initialize(imgInvScrollDown, "", _
+    'Call cBotonDiamAbajo.Initialize(imgInvScrollDown, "", _
                                     GrhPath & "BotonDiamAbajoF.bmp", _
                                     GrhPath & "BotonDiamAbajoF.bmp", Me)
     
-    Call cBotonMapa.Initialize(imgMapa, "", _
+   'Call cBotonMapa.Initialize(imgMapa, "", _
                                     GrhPath & "BotonMapaRollover.jpg", _
                                     GrhPath & "BotonMapaClick.jpg", Me)
                                     
-    Call cBotonGrupo.Initialize(imgGrupo, "", _
+   ' Call cBotonGrupo.Initialize(imgGrupo, "", _
                                     GrhPath & "BotonGrupoRollover.jpg", _
                                     GrhPath & "BotonGrupoClick.jpg", Me)
 
-    Call cBotonOpciones.Initialize(imgOpciones, "", _
+   ' Call cBotonOpciones.Initialize(imgOpciones, "", _
                                     GrhPath & "BotonOpcionesRollover.jpg", _
                                     GrhPath & "BotonOpcionesClick.jpg", Me)
 
-    Call cBotonEstadisticas.Initialize(imgEstadisticas, "", _
+   ' Call cBotonEstadisticas.Initialize(imgEstadisticas, "", _
                                     GrhPath & "BotonEstadisticasRollover.jpg", _
                                     GrhPath & "BotonEstadisticasClick.jpg", Me)
 
-    Call cBotonClanes.Initialize(imgClanes, "", _
+   ' Call cBotonClanes.Initialize(imgClanes, "", _
                                     GrhPath & "BotonClanesRollover.jpg", _
                                     GrhPath & "BotonClanesClick.jpg", Me)
 
@@ -1476,6 +1463,10 @@ Private Sub lblScroll_Click(Index As Integer)
     Inventario.ScrollInventory (Index = 0)
 End Sub
 
+Private Sub Label6_Click()
+
+End Sub
+
 Private Sub lblCerrar_Click()
     If UserParalizado Then 'Inmo
                     With FontTypes(FontTypeNames.FONTTYPE_WARNING)
@@ -1487,13 +1478,27 @@ Private Sub lblCerrar_Click()
                 Call WriteQuit
 End Sub
 
-Private Sub lblLVMax_Change()
-If lblLvl = 50 Then
-    lblLVMax.Caption = "NIVEL MAXIMO"
-    End If
-End Sub
 Private Sub lblMinimizar_Click()
     Me.WindowState = 1
+End Sub
+
+Private Sub lblName_Click()
+    LlegaronAtrib = False
+    LlegaronSkills = False
+    LlegoFama = False
+    Call WriteRequestAtributes
+    Call WriteRequestSkills
+    Call WriteRequestMiniStats
+    Call WriteRequestFame
+    Call FlushBuffer
+    Do While Not LlegaronSkills Or Not LlegaronAtrib Or Not LlegoFama
+        DoEvents 'esperamos a que lleguen y mantenemos la interfaz viva
+    Loop
+    frmEstadisticas.Iniciar_Labels
+    frmEstadisticas.Show , frmMain
+    LlegaronAtrib = False
+    LlegaronSkills = False
+    LlegoFama = False
 End Sub
 
 Private Sub Macro_Timer()
@@ -1616,8 +1621,8 @@ Private Sub SendTxt_KeyUp(KeyCode As Integer, Shift As Integer)
         KeyCode = 0
         SendTxt.Visible = False
         
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         Else
             hlst.SetFocus
         End If
@@ -1927,16 +1932,16 @@ End Sub
 Private Sub Label4_Click()
     Call Audio.PlayWave(SND_CLICK)
 
-    InvEqu.Picture = LoadPicture(App.path & "\Graficos\Centroinventario.jpg")
+    
 
     ' Activo controles de inventario
-    PicInv.Visible = True
+    picInv.Visible = True
     imgInvScrollUp.Visible = True
     imgInvScrollDown.Visible = True
 
     ' Desactivo controles de hechizo
     hlst.Visible = False
-    cmdINFO.Visible = False
+    cmdInfo.Visible = False
     CmdLanzar.Visible = False
     
     cmdMoverHechi(0).Visible = False
@@ -1947,18 +1952,18 @@ End Sub
 Private Sub Label7_Click()
     Call Audio.PlayWave(SND_CLICK)
 
-    InvEqu.Picture = LoadPicture(App.path & "\Graficos\Centrohechizos.jpg")
+    
     
     ' Activo controles de hechizos
     hlst.Visible = True
-    cmdINFO.Visible = True
+    cmdInfo.Visible = True
     CmdLanzar.Visible = True
     
     cmdMoverHechi(0).Visible = True
     cmdMoverHechi(1).Visible = True
     
     ' Desactivo controles de inventario
-    PicInv.Visible = False
+    picInv.Visible = False
     imgInvScrollUp.Visible = False
     imgInvScrollDown.Visible = False
 
@@ -1990,8 +1995,8 @@ On Error Resume Next  'el .SetFocus causaba errores al salir y volver a entrar
         (Not frmMSG.Visible) And (Not MirandoForo) And _
         (Not frmEstadisticas.Visible) And (Not frmCantidad.Visible) Then
          
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         ElseIf hlst.Visible Then
             hlst.SetFocus
         End If
@@ -1999,8 +2004,8 @@ On Error Resume Next  'el .SetFocus causaba errores al salir y volver a entrar
 End Sub
 
 Private Sub RecTxt_KeyDown(KeyCode As Integer, Shift As Integer)
-    If PicInv.Visible Then
-        PicInv.SetFocus
+    If picInv.Visible Then
+        picInv.SetFocus
     Else
         hlst.SetFocus
     End If
@@ -2056,8 +2061,8 @@ Private Sub SendCMSTXT_KeyUp(KeyCode As Integer, Shift As Integer)
         KeyCode = 0
         Me.SendCMSTXT.Visible = False
         
-        If PicInv.Visible Then
-            PicInv.SetFocus
+        If picInv.Visible Then
+            picInv.SetFocus
         Else
             hlst.SetFocus
         End If

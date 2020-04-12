@@ -895,7 +895,7 @@ UserMap = 1
     Call InitMI
 #End If
     
-    Call AddtoRichTextBox(frmCargando.status, "                    ¡Bienvenido a Argentum Online!", 255, 255, 255, True, False, True)
+    Call AddtoRichTextBox(frmCargando.status, "                    ¡Bienvenido a RentomAO!", 255, 255, 255, True, False, True)
     
     'Give the user enough time to read the welcome text
     Call Sleep(500)
