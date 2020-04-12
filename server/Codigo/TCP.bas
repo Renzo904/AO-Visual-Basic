@@ -375,7 +375,7 @@ With UserList(UserIndex)
     
     'Tiró los dados antes de llegar acá??
     If .Stats.UserAtributos(eAtributos.Fuerza) = 0 Then
-        Call WriteErrorMsg(UserIndex, "Debe tirar los dados antes de poder crear un personaje.")
+        Call WriteErrorMsg(UserIndex, "Debes tirar los dados antes de poder crear un personaje.")
         Exit Sub
     End If
     

@@ -506,7 +506,7 @@ On Error GoTo errH
     Call Shell(App.path & "\RECUPERAR.EXE", vbNormalFocus)
     Exit Sub
 errH:
-    Call MsgBox("No se encuentra el programa recuperar.exe", vbCritical, "Argentum Online")
+    Call MsgBox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
 End Sub
 
 Private Sub imgReglamento_Click()
@@ -514,7 +514,11 @@ Private Sub imgReglamento_Click()
 End Sub
 
 Private Sub imgSalir_Click()
-    prgRun = False
+   If MsgBox("Deseas salir?", vbYesNo, "Rentom AO") = vbYes Then
+        prgRun = False
+    ElseIf vbNo Then
+        prgRun = True
+    End If
 End Sub
 
 Private Sub imgServArgentina_Click()
