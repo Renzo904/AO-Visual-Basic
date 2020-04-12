@@ -2,16 +2,11 @@ frmCantidad = 0, 0, 0, 0, C, 156, 156, 1037, 598, C
 frmCargando = 78, 78, 1058, 459, C, 182, 182, 1063, 624, C
 frmComerciar = 104, 104, 991, 546, C, 208, 208, 1089, 650, C
 frmConnect = 78, 78, 959, 520, C, 52, 52, 933, 494, C
-frmMain = 76, 114, 1050, 492, C, 26, 26, 907, 468, C
+frmMain = 76, 114, 1050, 492, , 26, 26, 907, 468, C
 frmSkills3 = 182, 182, 1069, 624, C, 52, 52, 933, 494, C
 Carteles = 0, 0, 0, 0, C
-<<<<<<< Updated upstream
-Mod_Declaraciones = 182, 182, 1069, 624, 
-Mod_General = 156, 156, 1037, 598, 
-=======
 Mod_Declaraciones = 182, 182, 1069, 624, C
 Mod_General = 156, 156, 1037, 598, C
->>>>>>> Stashed changes
 Mod_TCP = 0, 0, 0, 0, C
 Mod_TileEngine = 182, 182, 1063, 624, C
 frmMSG = 104, 104, 1078, 485, C, 78, 78, 959, 520, C
