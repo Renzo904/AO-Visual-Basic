@@ -1,0 +1,8 @@
+Línea 175: la clase RichTextLib.RichTextBox del control CommerceConsole no era una clase de control cargada.
+Línea 183: el nombre de la propiedad _ExtentX de CommerceConsole no es válido.
+Línea 184: el nombre de la propiedad _ExtentY de CommerceConsole no es válido.
+Línea 185: el nombre de la propiedad _Version de CommerceConsole no es válido.
+Línea 188: el nombre de la propiedad ReadOnly de CommerceConsole no es válido.
+Línea 189: el nombre de la propiedad ScrollBars de CommerceConsole no es válido.
+Línea 190: el nombre de la propiedad DisableNoScroll de CommerceConsole no es válido.
+Línea 191: el nombre de la propiedad TextRTF de CommerceConsole no es válido.
