@@ -80,7 +80,7 @@ Public MiCabecera As tCabecera
 Public Config_Inicio As tGameIni
 
 Public Sub IniciarCabecera(ByRef Cabecera As tCabecera)
-    Cabecera.Desc = "Argentum Online by Noland Studios. Copyright Noland-Studios 2001, pablomarquez@noland-studios.com.ar"
+    Cabecera.Desc = "Rentom by Tomi y Renzo."
     Cabecera.CRC = Rnd * 100
     Cabecera.MagicWord = Rnd * 10
 End Sub

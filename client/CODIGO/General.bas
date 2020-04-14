@@ -118,7 +118,7 @@ On Error Resume Next
     
     If Not FileExist(archivoC, vbArchive) Then
 'TODO : Si hay que reinstalar, porque no cierra???
-        Call MsgBox("ERROR: no se ha podido cargar los colores. Falta el archivo colores.dat, reinstale el juego", vbCritical + vbOKOnly)
+        Call msgbox("ERROR: no se ha podido cargar los colores. Falta el archivo colores.dat, reinstale el juego", vbCritical + vbOKOnly)
         Exit Sub
     End If
     
@@ -265,37 +265,37 @@ Function CheckUserData(ByVal checkemail As Boolean) As Boolean
     Dim CharAscii As Integer
     
     If checkemail And UserEmail = "" Then
-        MsgBox ("Dirección de email invalida")
+        msgbox ("Dirección de email invalida")
         Exit Function
     End If
     
     If UserPassword = "" Then
-        MsgBox ("Ingrese un password.")
+        msgbox ("Ingrese un password.")
         Exit Function
     End If
     
     For loopc = 1 To Len(UserPassword)
         CharAscii = Asc(mid$(UserPassword, loopc, 1))
         If Not LegalCharacter(CharAscii) Then
-            MsgBox ("Password inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
+            msgbox ("Password inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
             Exit Function
         End If
     Next loopc
     
     If UserName = "" Then
-        MsgBox ("Ingrese un nombre de personaje.")
+        msgbox ("Ingrese un nombre de personaje.")
         Exit Function
     End If
     
     If Len(UserName) > 30 Then
-        MsgBox ("El nombre debe tener menos de 30 letras.")
+        msgbox ("El nombre debe tener menos de 30 letras.")
         Exit Function
     End If
     
     For loopc = 1 To Len(UserName)
         CharAscii = Asc(mid$(UserName, loopc, 1))
         If Not LegalCharacter(CharAscii) Then
-            MsgBox ("Nombre inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
+            msgbox ("Nombre inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
             Exit Function
         End If
     Next loopc
@@ -713,7 +713,7 @@ On Error GoTo errorH
 Exit Sub
 
 errorH:
-    Call MsgBox("Error cargando los servidores, actualicelos de la web", vbCritical + vbOKOnly, "Argentum Online")
+    Call msgbox("Error cargando los servidores, actualicelos de la web", vbCritical + vbOKOnly, "Rentom AO")
     
     Call CloseClient
 End Sub
@@ -787,9 +787,9 @@ Sub Main()
     End If
     
     If FindPreviousInstance Then
-        Call MsgBox("Argentum Online ya esta corriendo! No es posible correr otra instancia del juego. Haga click en Aceptar para salir.", vbApplicationModal + vbInformation + vbOKOnly, "Error al ejecutar")
+        Call msgbox("Rentom AO ya esta corriendo! No es posible correr otra instancia del juego. Haga click en Aceptar para salir.", vbApplicationModal + vbInformation + vbOKOnly, "Error al ejecutar")
 
-        If MsgBox("Desea continuar?", vbYesNo, "") = vbYes Then
+        If msgbox("¿Deseas continuar?", vbYesNo, "Rentom AO") = vbYes Then
             
         ElseIf vbNo Then
             End
@@ -1112,7 +1112,7 @@ On Error GoTo error
         'No recibe update, ejecutar AU
         'Ejecuto el AoUpdate, sino me voy
         If Dir(App.path & "\AoUpdate.exe", vbArchive) = vbNullString Then
-            MsgBox "No se encuentra el archivo de actualización AoUpdate.exe por favor descarguelo y vuelva a intentar", vbCritical
+            msgbox "No se encuentra el archivo de actualización AoUpdate.exe por favor descarguelo y vuelva a intentar", vbCritical
             End
         Else
             FileCopy App.path & "\AoUpdate.exe", App.path & "\AoUpdateTMP.exe"
@@ -1134,7 +1134,7 @@ error:
         Sleep 5
         Resume
     Else
-        MsgBox Err.Description & vbCrLf, vbInformation, "[ " & Err.number & " ]" & " Error "
+        msgbox Err.Description & vbCrLf, vbInformation, "[ " & Err.number & " ]" & " Error "
         End
     End If
 End Sub

@@ -107,6 +107,13 @@ Public Sub SetResolution()
     oldResWidth = Screen.Width \ Screen.TwipsPerPixelX
     oldResHeight = Screen.Height \ Screen.TwipsPerPixelY
     
+        'Modo ventana By Lyzz
+    If msgbox("¿Desea jugar en pantalla completa?", vbYesNo, "Resolución") = vbYes Then
+        NoRes = 0
+    Else
+        NoRes = 1
+    End If
+    
     If NoRes Then
         CambiarResolucion = (oldResWidth < 800 Or oldResHeight < 600)
     Else
@@ -157,3 +164,8 @@ Public Sub ResetResolution()
         lRes = ChangeDisplaySettings(typDevM, CDS_TEST)
     End If
 End Sub
+
+Public Function checkFps()
+        'Check fps by tomi
+    msgbox "Recomendamos no usar mucho los fps ilimitados ya que podria sobrecalentar tu PC, por que al ilimitar los fps estarias usando el 100% de tu CPU", vbExclamation, "Rentom AO"
+End Function

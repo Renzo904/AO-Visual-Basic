@@ -133,7 +133,7 @@ Begin VB.Form frmConnect
       NoFolders       =   0   'False
       Transparent     =   0   'False
       ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-      Location        =   "http:///"
+      Location        =   ""
    End
    Begin VB.Image imgTeclas 
       Height          =   375
@@ -343,9 +343,9 @@ Private Sub LoadButtons()
     Set LastPressed = New clsGraphicalButton
 
         
-    Call cBotonCrearPj.Initialize(imgCrearPj, GrhPath & "BotonCrearPersonajeConectar.jpg", _
-                                    GrhPath & "BotonCrearPersonajeRolloverConectar.jpg", _
-                                    GrhPath & "BotonCrearPersonajeClickConectar.jpg", Me)
+   ' Call cBotonCrearPj.Initialize(imgCrearPj, GrhPath & "BotonCrearPersonajeConectar.jpg", _
+                                 '   GrhPath & "BotonCrearPersonajeRolloverConectar.jpg", _
+                                  '  GrhPath & "BotonCrearPersonajeClickConectar.jpg", Me)
                                     
     Call cBotonRecuperarPass.Initialize(imgRecuperar, GrhPath & "BotonRecuperarPass.jpg", _
                                     GrhPath & "BotonRecuperarPassRollover.jpg", _
@@ -363,9 +363,9 @@ Private Sub LoadButtons()
                                     GrhPath & "BotonSalirClickConnect.jpg", Me)
                                     
                                     
-    Call cBotonConectarse.Initialize(imgConectarse, GrhPath & "BotonConectarse.jpg", _
-                                    GrhPath & "BotonConectarseRollover.jpg", _
-                                    GrhPath & "BotonConectarseClick.jpg", Me)
+    'Call cBotonConectarse.Initialize(imgConectarse, GrhPath & "BotonConectarse.jpg", _
+                                 '   GrhPath & "BotonConectarseRollover.jpg", _
+                                 '   GrhPath & "BotonConectarseClick.jpg", Me)
                                     
     Call cBotonTeclas.Initialize(imgTeclas, GrhPath & "BotonTeclas.jpg", _
                                     GrhPath & "BotonTeclasRollover.jpg", _
@@ -380,7 +380,7 @@ End Sub
 Private Sub CheckServers()
     If ServersRecibidos Then
         If Not IsIp(IPTxt) And CurServer <> 0 Then
-            If MsgBox("Atencion, está intentando conectarse a un servidor no oficial, NoLand Studios no se hace responsable de los posibles problemas que estos servidores presenten. ¿Desea continuar?", vbYesNo) = vbNo Then
+            If msgbox("Atencion, está intentando conectarse a un servidor no oficial, NoLand Studios no se hace responsable de los posibles problemas que estos servidores presenten. ¿Desea continuar?", vbYesNo) = vbNo Then
                 If CurServer <> 0 Then
                     IPTxt = ServersLst(CurServer).Ip
                     PortTxt = ServersLst(CurServer).Puerto
@@ -405,7 +405,7 @@ On Error GoTo errH
     Exit Sub
 
 errH:
-    Call MsgBox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
+    Call msgbox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
 End Sub
 
 Private Sub imgCodigoFuente_Click()
@@ -506,7 +506,7 @@ On Error GoTo errH
     Call Shell(App.path & "\RECUPERAR.EXE", vbNormalFocus)
     Exit Sub
 errH:
-    Call MsgBox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
+    Call msgbox("Aun no contamos con esta opcion aun, contacta con los administradores del juego.", vbOKOnly, "Rentom AO")
 End Sub
 
 Private Sub imgReglamento_Click()
@@ -514,7 +514,7 @@ Private Sub imgReglamento_Click()
 End Sub
 
 Private Sub imgSalir_Click()
-   If MsgBox("Deseas salir?", vbYesNo, "Rentom AO") = vbYes Then
+   If msgbox("¿Desea salir del juego?", vbYesNo, "Rentom AO") = vbYes Then
         prgRun = False
     ElseIf vbNo Then
         prgRun = True
